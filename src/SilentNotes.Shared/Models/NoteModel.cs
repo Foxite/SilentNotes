@@ -80,6 +80,13 @@ namespace SilentNotes.Models
         }
 
         /// <summary>
+        /// Gets or sets the DateTime of the reminder associated with the note.
+        /// If null, then the note does not have a reminder.
+        /// </summary>
+        [XmlElement(ElementName = "reminder", IsNullable = true)]
+        public DateTime? Reminder { get; set; }
+
+        /// <summary>
         /// Gets or sets the background color of the note as hex string, e.g. #ff0000
         /// </summary>
         [XmlAttribute(AttributeName = "background_color")]

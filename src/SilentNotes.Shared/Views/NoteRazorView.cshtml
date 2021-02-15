@@ -69,6 +69,12 @@ body { background-color: transparent; }
             toolbar.handlers['link'].call(toolbar, !selectionFormatValue);
         }
 
+        function setReminder() {
+            // TODO open datetime dialog
+            // Ideally this will be a native dialog rather than one we have to define ourselves.
+            // Idk how to do that ¯\_(ツ)_/¯
+		}
+
         function getNoteHtmlContent() {
             return quill.root.innerHTML;
         }
@@ -228,6 +234,7 @@ body { background-color: transparent; }
                     <div class="dropdown-item" v-bind:class="{ active: CodeActive }" onclick="toggleFormat('code-block');">@{WriteLiteral(Model.Icon["code-braces"]);} @Model.Language["note_code"]</div>
                     <div class="dropdown-item" v-bind:class="{ active: QuoteActive }" onclick="toggleFormat('blockquote');">@{WriteLiteral(Model.Icon["format-quote-close"]);} @Model.Language["note_quotation"]</div>
                     <div class="dropdown-item" onclick="toggleLink()">@{WriteLiteral(Model.Icon["link-variant"]);} @Model.Language["note_link"]</div>
+                    <div class="dropdown-item" onclick="setReminder()">@{WriteLiteral(Model.Icon["reminder"]); } @Model.Language["note_reminder"]</div>
                     @if (Model.ShowManualSynchronization)
                     {
                         <div class="dropdown-divider"></div>

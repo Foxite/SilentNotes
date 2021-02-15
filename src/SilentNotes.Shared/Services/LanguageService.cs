@@ -58,6 +58,7 @@ namespace SilentNotes.Services
             resources["note_code"] = "Code block";
             resources["note_quotation"] = "Quotation";
             resources["note_link"] = "Link";
+            resources["note_reminder"] = "Reminder...";
             resources["note_header1"] = "Header 1";
             resources["note_header2"] = "Header 2";
             resources["note_header3"] = "Header 3";
